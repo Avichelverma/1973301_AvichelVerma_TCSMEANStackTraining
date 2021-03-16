@@ -1,0 +1,79 @@
+body {
+	margin: 0;
+}
+
+h1 {
+	display: block;
+	text-align: center;
+}
+
+.container-wrapper {
+	width: 40%;
+	margin: 0 auto;
+	border: 5px solid black;
+	min-height: 50vh;
+}
+
+h2 {
+	text-align: center;
+	color: blue;
+	text-decoration: underline;
+}
+
+/* Custom Style for programManager.html */
+
+.form-wrapper {
+	font-size: large;
+	margin: 0 10rem;
+	display: table;
+	border-spacing: 0 15px;
+	color: red;
+}
+
+span {
+	display: table-row;
+}
+
+label {
+	display: table-cell;
+	padding: 5px;
+}
+
+input {
+	display: table-cell;
+	padding: 5px;
+}
+
+.button-wrapper {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+/* Custom style for financeTeam.html */
+
+.table-wrapper {
+	margin: 0 auto;
+	width: 80%;
+	font-size: large;
+}
+
+#budgetTable {
+	text-align: left;
+	font-family: Arial, Helvetica, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th {
+	background-color: royalblue;
+}
+
+table,
+th,
+td {
+	border: 2px solid black;
+}
+
+thead {
+	text-align: center;
+}
