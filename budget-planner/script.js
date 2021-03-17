@@ -33,7 +33,6 @@ function insertBudgetIntoSession() {
 function displayBudgetTable() {
 	retrieveDataFromSession();
 	var table = document.getElementById('budgetTable');
-	console.log(budgetDetailObj.length);
 	for (let i = 0; i < budgetDetailObj.length; i++) {
 		var newRow = table.insertRow();
 		var cell1 = newRow.insertCell();
