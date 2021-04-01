@@ -1,0 +1,15 @@
+.header {
+	background: grey;
+	color: rgb(48, 47, 47);
+	display: flex;
+	text-align: center;
+	height: 80px;
+}
+
+.header > h1 {
+	margin: auto;
+}
+
+.main-container {
+	display: flex;
+}
