@@ -1,0 +1,66 @@
+<div class="container">
+    <h2 class="my-3" style="text-align:center"> Welcome to Quiz Application</h2>
+    <div *ngIf="!isReview" class="card mb-3">
+        <div class="card-body">
+            <form #submissionRef="ngForm" (ngSubmit)="submitTest(submissionRef.value); submissionRef.reset()">
+                <div *ngFor="let question of questionList">
+                    <div>{{question.question}}</div>
+                    <div class="form-group row">
+                        <label class="col-md-3 col-form-label">Choose Correct Option</label>
+                        <div class="col-md-9 col-form-label">
+                            <div class="form-check form-check-inline mr-1">
+                                <input class="form-check-input" type="radio" name="{{question.id}}"
+                                    value="{{question.a}}" [(ngModel)]="question.selected">
+                                <label class="form-check-label">{{question.a}} </label>
+                            </div>
+                            <div class="form-check form-check-inline mr-1">
+                                <input class="form-check-input" type="radio" name="{{question.id}}"
+                                    value="{{question.b}}" [(ngModel)]="question.selected">
+                                <label class="form-check-label">{{question.b}}</label>
+                            </div>
+                            <div class="form-check form-check-inline mr-1">
+                                <input class="form-check-input" type="radio" name="{{question.id}}"
+                                    value="{{question.c}}" [(ngModel)]="question.selected">
+                                <label class="form-check-label">{{question.c}}</label>
+                            </div>
+                            <div class="form-check form-check-inline mr-1">
+                                <input class="form-check-input" type="radio" name="{{question.id}}"
+                                    value="{{question.d}}" [(ngModel)]="question.selected">
+                                <label class="form-check-label">{{question.d}}</label>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="col-12" style="justify-content: center;display: flex;">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div *ngIf="isReview">
+        <div class="card mb-3">
+            <h3 style='text-align:center'>Quiz Review</h3>
+            <div class="card-body">
+                <div class='d-flex justify-content-around'>
+                    <h4>Total Answered : {{totalAnswered}}</h4>
+                    <h4 style='color:green'>Correct Answered : {{correctAnswered}}</h4>
+                </div>
+                <div class="card-body">
+                    <div *ngFor="let answer of answerList" style="text-align: center;"
+                        [ngStyle]="{'color': answer.color}">
+                        <h5>{{answer.question}}</h5>
+                        <h5>Your Answer: {{answer.selected}}</h5>
+                        <h5>Right Answer: {{answer.answer}}</h5>
+                        <hr>
+                    </div>
+                    <div class="col-12" style="justify-content: center;display: flex;">
+                        <button type="button" class="btn btn-success" (click)="onRetry()">Retry</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

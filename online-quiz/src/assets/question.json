@@ -1,0 +1,94 @@
+{
+    "questions":[
+		{
+			"id": 1,
+			"question": "Which HTML tag do we use to put the JavaScript?",
+			"a": "<javascript>",
+			"b": "<script>",
+			"c": "<js>",
+			"d": "None of the above",
+			"answer": "<script>"
+		},
+        {
+			"id": 2,
+			"question": "Which built-in method calls a function for each element in the array?",
+			"a": "while()",
+			"b": "loop",
+			"c": "forEach",
+			"d": "takeUntil",
+			"answer": "forEach"
+		},
+        {
+			"id": 3,
+			"question": "What is the difference between let and var?",
+			"a": "let has local scope",
+			"b": "Both are same",
+			"c": "var is new data type",
+			"d": "let consumes more cpu and ram",
+			"answer": "let has local scope"
+		},
+        {
+			"id": 4,
+			"question": "What is TypeScript?",
+			"a": "Superset of Javascript",
+			"b": "script that runs on browser",
+			"c": "A DataType Collection of Javascript",
+			"d": "None of the above",
+			"answer": "Superset of Javascript"
+		},
+        {
+			"id": 5,
+			"question": "Which of the following is right syntex for arrow function?",
+			"a": "a -> { return b; }",
+			"b": "x <= x + y;",
+			"c": "x <- x + 5;",
+			"d": "x => x + 5;",
+			"answer": "x => x + 5;"
+		},
+        {
+			"id": 6,
+			"question": "Which new ES6 syntax helps with formatting output text - mixing variables with string literals, for example.",
+			"a": "Generator Functions",
+			"b": "Arrow Functions",
+			"c": "Template Strings",
+			"d": "Set Data Structure",
+			"answer": "Template Strings"
+		},
+        {
+			"id": 7,
+			"question": "Which ES6 feature helps in merging of a number of changed properties into an existing object?",
+			"a": "Class syntex",
+			"b": "Object.assign()",
+			"c": "map data structure",
+			"d": "Array.includes(obj);",
+			"answer": "Object.assign()"
+		},
+        {
+			"id": 8,
+			"question": "What is the difference between == and === ?",
+			"a": "=== throws syntex error",
+			"b": "== checks values only, === checks types as well",
+			"c": "=== is reference type check only",
+			"d": "Both are same",
+			"answer": "== checks values only, === checks types as well"
+		},
+        {
+			"id": 9,
+			"question": "Which of the following is NOT the method of an Array?",
+			"a": ".map()",
+			"b": ".includes()",
+			"c": ".subscribe()",
+			"d": ".flatMap()",
+			"answer": ".subscribe()"
+		},
+        {
+			"id": 10,
+			"question": "What will be the output of the following code: ['a', 'b', 'c'].fill(7, 1, 2);?",
+			"a": "['a', 7, 'c']",
+			"b": "['a', 7, 7, 'b', 'c']",
+			"c": "['a', 'b', 'c']",
+			"d": "['7', 7, 'c']",
+			"answer": "['a', 7, 'c']"
+		}
+	]
+}
