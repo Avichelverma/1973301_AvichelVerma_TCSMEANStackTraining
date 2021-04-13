@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatApp</title>
+    <script src="https://cdn.socket.io/4.0.1/socket.io.min.js"></script>
+    <style>
+        .main-body {
+            min-height: 50vh;
+            display: flex;
+            justify-content: center;
+            align-items: center
+        }
+
+        form {
+            border: 2px solid;
+            padding: 50px;
+            text-align: center;
+        }
+
+        form>div {
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-body">
+        <div class="form-container">
+            <h1>Send Messages to Server</h1>
+            <form id="messageForm">
+                <div>
+                    <label>Name:</label>
+                    <input type="text" name="name" id="name">
+                </div>
+                <div>
+                    <label>Message:</label>
+                    <textarea name="message" id="message"></textarea>
+                </div>
+                <input type="button" value="Send" onclick="sendMessage()">
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const socket = io();
+        function sendMessage() {
+            console.log("clicked")
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+
+            const data = { name, message }
+            socket.emit('chat-message', data)
+            document.getElementById('messageForm').reset()
+        }
+
+    </script>
+</body>
+
+</html>
