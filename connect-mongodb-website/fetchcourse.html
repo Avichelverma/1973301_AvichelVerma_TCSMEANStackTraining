@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+</head>
+
+<body>
+    <h1>Fetch Course</h1>
+    <div class="table-wrapper">
+        <table id="coursetable">
+            <thead>
+                <tr>
+                    <th>Course ID</th>
+                    <th>Course Name</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <a href="http://localhost:3000/">Back</a>
+
+
+    <script>
+        function getData() {
+            fetch('http://localhost:3000/api/course', { method: "GET" }).then(response => response.json())
+                .then(data => {
+                    var table = document.getElementById('coursetable');
+                    for (let i = 0; i < data.length; i++) {
+                        var newRow = table.insertRow();
+                        var cell1 = newRow.insertCell();
+                        var cell2 = newRow.insertCell();
+                        var cell3 = newRow.insertCell();
+                        var cell4 = newRow.insertCell();
+                        cell1.innerHTML = data[i].id;
+                        cell2.innerHTML = data[i].name;
+                        cell3.innerHTML = data[i].description;
+                        cell4.innerHTML = data[i].amount;
+                    }
+                });
+        }
+        getData();
+    </script>
+
+</body>
+
+</html>
